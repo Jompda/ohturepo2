@@ -1,7 +1,7 @@
 from urllib import request
 from project import Project
 import toml
-import json # debug
+#import json # debug
 
 
 class ProjectReader:
@@ -16,7 +16,7 @@ class ProjectReader:
         # deserialisoi TOML-formaatissa oleva merkkijono ja muodosta Project-olio sen tietojen perusteella
         parsed = toml.loads(content)
         root = parsed["tool"]["poetry"]
-        print(json.dumps(root, indent=2)) # debug
+        #print(json.dumps(root, indent=2)) # debug
         return Project(
             root["name"],
             root["description"],
